@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Layout, Seo, RichText } from "components";
+import { Layout, SeoData, RichText } from "components";
 
 const Post = ({ data }) => {
   const {
@@ -9,7 +9,7 @@ const Post = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={title} description={description} />
+      <SeoData title={title} description={description} />
       {!!content && (
         <RichText content={content.raw} references={content.references} />
       )}

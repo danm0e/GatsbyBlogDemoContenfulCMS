@@ -1,4 +1,4 @@
-export * from "./Seo";
+export * from "./SeoData";
 export * from "./Layout";
 export * from "./Menu";
 export * from "./Header";

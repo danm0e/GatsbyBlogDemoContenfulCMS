@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Seo } from "components";
+import { Layout, SeoData } from "components";
 
 import {
   Content,
@@ -16,7 +16,7 @@ const Blog = ({ pageContext }) => {
 
   return (
     <Layout>
-      <Seo title={title} description={""} />
+      <SeoData title={title} description={""} />
       <Content>
         <h1>{title}</h1>
 
