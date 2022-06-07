@@ -1,5 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import { Header } from "components";
+import { Content } from "./style";
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -15,10 +17,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Layout = ({ children }) => {
-    return (
-        <div>
-            <GlobalStyle />
-            <section>{children}</section>
-        </div>
-    );
+  return (
+    <main>
+      <GlobalStyle />
+      <Header />
+      <Content>{children}</Content>
+    </main>
+  );
 };

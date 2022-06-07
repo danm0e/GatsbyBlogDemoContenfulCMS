@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby and Contentful",
   "version": "0.1.0",
-  "author": "Tom Phillips <info@tomphill.co.uk>",
+  "author": "Dan Moe",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.2",
     "babel-plugin-styled-components": "^1.12.0",
@@ -45,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomphill/gatsby-contentful-starter"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
-    "url": "https://github.com/tomphill/gatsby-contentful-starter/issues"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
