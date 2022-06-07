@@ -9,7 +9,7 @@ export const Content = styled.section`
 export const Post = styled(Link)`
   background: #eee;
   border-radius: 0.5rem;
-  color: #777;
+  color: #444;
   display: block;
   padding: 1rem;
   text-decoration: none;
@@ -40,7 +40,7 @@ export const Pagination = styled.div`
 
 export const PageLink = styled(Link)`
   align-items: center;
-  background: black;
+  background: #777;
   color: white;
   display: flex;
   height: 30px;
@@ -52,12 +52,12 @@ export const PageLink = styled(Link)`
   ${({ active }) =>
     active === "true" &&
     css`
-      background: #777;
+      background: #444;
     `}
 
   &:hover {
     color: white;
-    background: #777;
+    background: #444;
   }
 
   &:first-child {

@@ -20,6 +20,7 @@ exports.createPages = async ({ actions, graphql }) => {
         slug
         title
       }
+
       allContentfulPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
@@ -41,16 +42,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const posts = allContentfulPost.edges;
   const totalPages = Math.ceil(posts.length / postsPerPage);
 
-  posts.forEach((post) => {
-    createPage({
-      path: `${slug}/${post.node.slug}`,
-      context: {
-        id: post.node.contentful_id,
-      },
-      component: path.resolve("./src/templates/Post/index.js"),
-    });
-  });
-
+  // creates paginated blog page
   Array.from({ length: totalPages }).forEach((_, i) => {
     const from = i * postsPerPage;
     const to = from + postsPerPage;
@@ -66,6 +58,17 @@ exports.createPages = async ({ actions, graphql }) => {
         currentPage: i + 1,
         posts: paginatedPosts,
       },
+    });
+  });
+
+  // creates individual blog post pages
+  posts.forEach((post) => {
+    createPage({
+      path: `${slug}/${post.node.slug}`,
+      context: {
+        id: post.node.contentful_id,
+      },
+      component: path.resolve("./src/templates/Post/index.js"),
     });
   });
 };

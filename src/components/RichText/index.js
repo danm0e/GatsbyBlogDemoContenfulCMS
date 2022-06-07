@@ -50,10 +50,6 @@ export const RichText = ({ content, references = [] }) => {
   };
 
   return (
-    <Wrapper>
-      <Content>
-        {documentToReactComponents(JSON.parse(content), options)}
-      </Content>
-    </Wrapper>
+    <Wrapper>{documentToReactComponents(JSON.parse(content), options)}</Wrapper>
   );
 };
